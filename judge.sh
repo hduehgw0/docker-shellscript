@@ -27,3 +27,5 @@ if [ $DIFF_STATUS -eq 0 ]; then
 else
     echo "WA"
 fi
+
+rm -f "$ACTUAL"
