@@ -5,8 +5,6 @@ EXPECTED="output.txt"
 PROGRAM="main.py"
 ACTUAL="actual.txt"
 
-# 「2> /dev/null」は、Pythonの赤いエラーメッセージを画面に表示させず、
-# すっきりとしたジャッジ結果だけを見せるための記述!!
 python3 "$PROGRAM" < "$INPUT" > "$ACTUAL" 2> /dev/null
 
 # 正常終了 -> 0  異常終了 -> 0以外
