@@ -5,6 +5,8 @@ EXPECTED="output.txt"
 PROGRAM="main.py"
 ACTUAL="actual.txt"
 
+trap "rm -f $ACTUAL" EXIT
+
 python3 "$PROGRAM" < "$INPUT" > "$ACTUAL" 2> /dev/null
 
 # 正常終了 -> 0  異常終了 -> 0以外
@@ -25,5 +27,3 @@ if [ $DIFF_STATUS -eq 0 ]; then
 else
     echo "WA"
 fi
-
-rm -f "$ACTUAL"
