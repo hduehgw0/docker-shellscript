@@ -2,6 +2,6 @@ FROM python:3.9-slim
 
 WORKDIR /app
 
-COPY main.py judge.sh input.txt output.txt ./
+COPY main.py judge.sh ./
 
 CMD ["bash", "judge.sh"]

@@ -23,10 +23,13 @@ docker build -t algo-judge .
 
 ### 2. コンテナの実行（ジャッジの開始）
 ビルドが完了したら、以下のコマンドでコンテナを起動します。
-実行が終わると同時にコンテナが自動削除されるよう --rm オプションを付与しています。
+テストデータをコンテナに直接読み込ませるため、`-v` オプション（ボリュームマウント）を使用しています。
 
 ```bash
-docker run --rm algo-judge
+docker run --rm \
+  -v $(pwd)/input.txt:/app/input.txt \
+  -v $(pwd)/output.txt:/app/output.txt \
+  algo-judge
 ```
 
 ### 3. 判定結果について
