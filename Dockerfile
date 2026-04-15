@@ -4,4 +4,6 @@ WORKDIR /app
 
 COPY main.py judge.sh ./
 
-CMD ["bash", "judge.sh"]
+RUN chmod +x judge.sh
+
+CMD ["./judge.sh"]
