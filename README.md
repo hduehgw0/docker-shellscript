@@ -44,4 +44,4 @@ docker run --rm \
 
 ### 4. テストケースの変更方法
 
-別のテストを行いたい場合は、ローカルの input.txt と output.txt の中身を書き換えて保存し、再度 docker build を実行してから docker run を行ってください。
+別のテストを行いたい場合は、ローカルの input.txt と output.txt の中身を書き換えて保存し、再度docker run を行ってください。
